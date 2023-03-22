@@ -29,9 +29,9 @@ mtd1: 00300000 00001000 "uboot"
 mtd2: 00100000 00001000 "data"
 ```
 
-10. Make a directory under `tmp` to mount your USB drive (e.g. with `# mkdir /tmp/usbdrive`).
+10. Create a new directory (e.g. under `tmp`) to mount your USB drive (e.g. with `# mkdir /tmp/usbdrive`).
 
-11. Mount your USB drive to the directory created in step 10 (e.g. with `# mount /dev/sdXX /mnt/usbdrive`) and `cd` there.
+11. Mount your USB drive to the directory created in step 10 (e.g. with `# mount /dev/sdXX /tmp/usbdrive`) and `cd` there.
 
 12. `# flashcp -v u-boot-spl.bin.normal.out /dev/mtd0`
 
