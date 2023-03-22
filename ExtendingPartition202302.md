@@ -60,3 +60,14 @@ The filesystem on /dev/mmcblk1p4 is now 7838464 (4k) blocks long.
 ```
 04. Now we can check and see that the partition has grown to its maximum size:
 `# df -h`
+```
+root@starfive:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            3.7G     0  3.7G   0% /dev
+tmpfs           793M  3.1M  790M   1% /run
+/dev/mmcblk1p4   30G  1.9G   28G   7% /
+tmpfs           3.9G     0  3.9G   0% /dev/shm
+tmpfs           5.0M   12K  5.0M   1% /run/lock
+tmpfs           793M   32K  793M   1% /run/user/107
+tmpfs           793M   24K  793M   1% /run/user/0
+```
