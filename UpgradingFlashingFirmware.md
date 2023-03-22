@@ -1,6 +1,6 @@
 # Upgrading/Flashing Firmware
 
-After purchasing a new board, it is required to flash and upgrade its firmware to be able to boot and use newer Linux/UNIX OSes.
+After purchasing a new board, it is required to flash and upgrade its firmware to be able to boot and use newer Linux/UNIX-like OSes.
 
 **You will need:** a USB drive formatted with FAT32 and microSD card or eMMC
 
@@ -30,4 +30,4 @@ After purchasing a new board, it is required to flash and upgrade its firmware t
 
 12. `# flashcp -v visionfive2_fw_payload.img /dev/mtd1`
 
-13. Done. Power the board off (e.g. with `# poweroff`) and remove the storage. Now you are able to run any Linux/UNIX-like OS from it.
+13. Done. Power the board off (e.g. with `# poweroff`) and remove the storage and USB drive. Now you should be able to run any Linux/UNIX-like OS.
