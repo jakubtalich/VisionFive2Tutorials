@@ -1,6 +1,8 @@
 # Extending the System Partition on a microSD card or eMMC
 To fully use all the free space under StarFive's Debian version 202302 on a microSD or eMMC one must extend the partition to its full available size:
 
+(Based on: https://doc-en.rvspace.org/VisionFive2/Quick_Start_Guide/VisionFive2_QSG/extend_partition.html)
+
 01. List the available space on all partitions:
 `# df -h`
 Example output where we can see our root partition is 96% full:
