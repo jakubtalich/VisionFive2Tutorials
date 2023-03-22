@@ -4,7 +4,7 @@ After purchasing a new board, it is required to flash and upgrade its firmware t
 
 **You will need:** a USB drive formatted with FAT32 and microSD card or eMMC
 
-1. From StarFive's repository (https://drive.google.com/drive/folders/1jljq2s1w9HXlw8cST0nMS-U2DKfk1iEB) download StarFive's version 55 of Debian (you will have to extract the `.img` file from the downloaded archive first) and using balenaEtcher (https://www.balena.io/etcher) flash it to either a microSD card or eMMC.
+1. From StarFive's repository (https://drive.google.com/drive/folders/1jljq2s1w9HXlw8cST0nMS-U2DKfk1iEB) (also accessible via https://debian.starfivetech.com/) download StarFive's version 55 of Debian (you will have to extract the `.img` file from the downloaded archive first) and using balenaEtcher (https://www.balena.io/etcher) flash it to either a microSD card or eMMC.
 
 2. Connect the VisionFive 2 board to a display (ideally via HDMI) and internet (ethX), insert the flashed media into the board and boot it up.
 
