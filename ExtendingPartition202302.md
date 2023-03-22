@@ -1,4 +1,4 @@
-# Extending the system partition on a microSD card or eMMC
+# Extending the System Partition on a microSD card or eMMC
 To fully use all the free space under StarFive's Debian version 202302 on a microSD or eMMC one must extend the partition to its full available size:
 
 01. List the available space on all partitions:
