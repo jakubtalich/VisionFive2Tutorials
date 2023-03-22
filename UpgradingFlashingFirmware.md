@@ -37,4 +37,4 @@ mtd2: 00100000 00001000 "data"
 
 12. `# flashcp -v visionfive2_fw_payload.img /dev/mtd1`
 
-13. Done. Power the board off (e.g. with `# poweroff`) and remove the storage and USB drive. Now you should be able to run any Linux/UNIX-like OS.
+13. Done. Power the board off (e.g. first with `# poweroff`), then remove the storage and USB drive. Now you should be able to run any Linux/UNIX-like OS from the microSD card or eMMC.
