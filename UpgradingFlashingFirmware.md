@@ -20,7 +20,12 @@ After purchasing a new board, it is required to flash and upgrade its firmware t
 
 8. Via SSH connect to the board from another computer under the root account (e.g. with `$ ssh root@IP` - IP from step 3). **Password for the root account is:** **`starfive`**
 
-9. Check for `mtd` with `$ cat /proc/mtd`. It should give you 3 entries with `mtdX`.
+9. Check for `mtd` with `$ cat /proc/mtd`. The output should look like this:
+```$ cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00020000 00001000 "spl"
+mtd1: 00300000 00001000 "uboot"
+mtd2: 00100000 00001000 "data"```
 
 10. Make a directory under `tmp` to mount your USB drive (e.g. with `# mkdir /tmp/usbdrive`).
 
