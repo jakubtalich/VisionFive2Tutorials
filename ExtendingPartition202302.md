@@ -1,9 +1,7 @@
 # Extending the system partition on a microSD card or eMMC
 To fully use all the free space under StarFive's Debian version 202302 on a microSD or eMMC one must extend the partition to its full available size:
 01. List the available space on all partitions:
-```
-# df -h
-```
+`# df -h`
 Example output where we can see our root partition is 96% full:
 ```
 Filesystem      Size  Used Avail Use% Mounted on
@@ -17,7 +15,6 @@ tmpfs           793M   24K  793M   1% /run/user/0
 ```
 02. Run `fdisk` (where X stands for the number of your partition - in this case an eMMC partition):
 `# fdisk /dev/mmcblkX`
-```
 Example output:
 ```
 root@starfive:~# fdisk /dev/mmcblk1
@@ -62,6 +59,4 @@ old_desc_blocks = 1, new_desc_blocks = 4
 The filesystem on /dev/mmcblk1p4 is now 7838464 (4k) blocks long.
 ```
 04. Now we can check and see that the partition has grown to its maximum size:
-```
-# df -h
-```
+`# df -h`
