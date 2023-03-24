@@ -55,7 +55,9 @@ Syncing disks.
 ```
 Here we adjusted partition No. 4.
 
-03. Resize the `/dev/mmcblkXp4` (again, change the X) partition by running the `resize2fs` command to fully utilize the unused block:
+03. Inform the kernel about changes with `# partx /dev/sda`.
+
+04. Resize the `/dev/mmcblkXp4` (again, change the X) partition by running the `resize2fs` command to fully utilize the unused block:
 
 ```
 root@starfive:~# resize2fs /dev/mmcblk1p4
@@ -66,7 +68,8 @@ old_desc_blocks = 1, new_desc_blocks = 4
 [  295.993163] EXT4-fs (mmcblk1p4): resized filesystem to 7838464
 The filesystem on /dev/mmcblk1p4 is now 7838464 (4k) blocks long.
 ```
-04. Now we can check and see that the partition has grown to its maximum size:
+
+05. Now we can check and see that the partition has grown to its maximum size:
 `# df -h`
 
 ```
