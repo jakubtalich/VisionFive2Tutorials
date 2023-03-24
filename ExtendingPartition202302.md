@@ -55,7 +55,7 @@ Syncing disks.
 ```
 Here we adjusted partition No. 4.
 
-03. Inform the kernel about changes with `# partx /dev/sda`.
+03. Inform the kernel about changes with `# partx /dev/mmcblkX`.
 
 04. Resize the `/dev/mmcblkXp4` (again, change the X) partition by running the `resize2fs` command to fully utilize the unused block:
 
