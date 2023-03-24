@@ -1,7 +1,5 @@
 # Extending the btrfs System (root) Partition on a microSD card or eMMC
-To fully use all the free space under StarFive's Debian version 202302 on a microSD or eMMC one must extend the partition to its full available size:
-
-(Based on: https://doc-en.rvspace.org/VisionFive2/Quick_Start_Guide/VisionFive2_QSG/extend_partition.html)
+This applies to https://github.com/hexdump0815/imagebuilder/releases/tag/230321-02 and other images with btrfs on the root partition.
 
 01. List the available space on all partitions:
 `# df -h`
@@ -61,26 +59,21 @@ Here we adjusted partition No. 4.
 04. Resize the `/dev/mmcblkXp4` (again, change the X) partition by running the `resize2fs` command to fully utilize the unused block:
 
 ```
-root@starfive:~# resize2fs /dev/mmcblk1p4
-resize2fs 1.46.6-rc1 (12-Sep-2022)
-Filesystem at /d[  295.372617] EXT4-fs (mmcblk1p4): resizing filesystem from 535291 to 7838464 blocks
-ev/mmcblk1p4 is mounted on /; on-line resizing required
-old_desc_blocks = 1, new_desc_blocks = 4
-[  295.993163] EXT4-fs (mmcblk1p4): resized filesystem to 7838464
-The filesystem on /dev/mmcblk1p4 is now 7838464 (4k) blocks long.
+# btrfs filesystem resize max /
+Resize device id 1 (/dev/mmcblk1p4) from 2.99GiB to max
 ```
 
 05. Now we can check and see that the partition has grown to its maximum size:
 `# df -h`
 
 ```
-root@starfive:~# df -h
+$ df -h
 Filesystem      Size  Used Avail Use% Mounted on
-udev            3.7G     0  3.7G   0% /dev
-tmpfs           793M  3.1M  790M   1% /run
-/dev/mmcblk1p4   30G  1.9G   28G   7% /
-tmpfs           3.9G     0  3.9G   0% /dev/shm
+udev            1.7G     0  1.7G   0% /dev
+tmpfs           389M  3.1M  386M   1% /run
+/dev/mmcblk1p4   30G  2.0G   28G   7% /
+tmpfs           1.9G     0  1.9G   0% /dev/shm
 tmpfs           5.0M   12K  5.0M   1% /run/lock
-tmpfs           793M   32K  793M   1% /run/user/107
-tmpfs           793M   24K  793M   1% /run/user/0
+/dev/mmcblk1p3  511M   35M  477M   7% /boot
+tmpfs           389M   52K  389M   1% /run/user/1001
 ```
