@@ -14,7 +14,7 @@ Source: https://github.com/starfive-tech/VisionFive2/issues/20#issuecomment-1374
 - Your line of interest is `reg = <0x00 0x40000000 0x01 0x00>;` or `reg = <0x00 0x40000000 0x1 0x00>;`
 - It needs to be replaced with `reg = <0x00 0x40000000 0x02 0x00>;`. Notice `0x02` and not `0x01`
 
-04. Compile the file back: `dtc -I dts -O dtb -o /boot/dtbs/starfive/vf2.dtb vf2.dts`
+04. Compile the file back: `# dtc -I dts -O dtb -o /boot/dtbs/starfive/vf2.dtb vf2.dts`
 - My location of the `.dts` files was in `/boot/dtb-5.15.0-vf2-104+/starfive/jh7110-visionfive-v2.dtb` (on a custom Debian image), yours maybe also be different from the paths mentioned here.
 - (So in my case I ran: `# dtc -I dts -O dtb -o /boot/dtb-5.15.0-vf2-104+/starfive/jh7110-visionfive-v2.dtb vf2.dts`)
 
