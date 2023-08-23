@@ -6,7 +6,7 @@ Source: https://github.com/starfive-tech/VisionFive2/issues/20#issuecomment-1374
 
 02. Decompile your source dtb into `/tmp` (on a booted-up system):
 ```
-cd /tmp; dtc -I dtb -O dts /sys/firmware/fdt -o vf2.dts
+# cd /tmp; dtc -I dtb -O dts /sys/firmware/fdt -o vf2.dts
 ```
 
 03. Edit `vf2.dts` (e.g. with `nano vf2.dts`:
